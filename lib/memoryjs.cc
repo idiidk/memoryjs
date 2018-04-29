@@ -560,6 +560,10 @@ void writeMemory(const FunctionCallbackInfo<Value> &args)
 
     Memory.writeMemory<int>(process::hProcess, args[0]->Uint32Value(), args[1]->NumberValue());
   }
+  else if(!strcmp(dataType, "int64")) {
+
+    Memory.writeMemory<unsigned __int64>(process::hProcess, args[0]->Uint32Value(), args[1]->NumberValue());
+  }
   else if (!strcmp(dataType, "dword"))
   {
 

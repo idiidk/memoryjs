@@ -1,5 +1,6 @@
 # memoryjs
 Node add-on for memory reading and writing! (finally!)
+This is an edited version to fix integer overflows when reading and writing. It also introduces 2 new types: POINTER and INT64.
 
 # Features
 
@@ -161,11 +162,11 @@ The `handle` and `modBaseAddr` properties are only available when opening a proc
 
 When using the write or read functions, the data type (dataType) parameter can either be a string and be one of the following:
 
-`"int", "dword", "long", "float", "double", "bool", "boolean", "ptr", "pointer", "str", "string", "vec3", "vector3", "vec4", "vector4"`
+`"int", "int64", "dword", "long", "float", "double", "bool", "boolean", "ptr", "pointer", "str", "string", "vec3", "vector3", "vec4", "vector4"`
 
 or can reference constants from within the library:
 
-`memoryjs.INT, memoryjs.DWORD, memoryjs.LONG, memoryjs.FLOAT, memoryjs.DOUBLE, memoryjs.BOOL, memoryjs.BOOLEAN, memoryjs.PTR, memoryjs.POINTER, memoryjs.STR, memoryjs.STRING, memoryjs.VEC3, memoryjs.VECTOR3, memoryjs.VEC4, memoryjs.VECTOR4`
+`memoryjs.INT, memoryjs.INT64 memoryjs.DWORD, memoryjs.LONG, memoryjs.FLOAT, memoryjs.DOUBLE, memoryjs.BOOL, memoryjs.BOOLEAN, memoryjs.PTR, memoryjs.POINTER, memoryjs.STR, memoryjs.STRING, memoryjs.VEC3, memoryjs.VECTOR3, memoryjs.VEC4, memoryjs.VECTOR4`
 
 This is simply used to denote the type of data being read or written.
 
