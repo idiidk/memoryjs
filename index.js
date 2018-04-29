@@ -4,6 +4,7 @@ module.exports = {
 
   /* data type constants */
   INT: 'int',
+  INT64: 'int64',
   DWORD: 'dword',
   LONG: 'long',
   FLOAT: 'float',
